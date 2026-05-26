@@ -51,12 +51,13 @@ export function removeFavorite(id) {
   const filtered  = favorites.filter((fav) => fav.id !== id);
 
   if (filtered.length === favorites.length) {
-    return false; // Nothing was removed
+    return false; // Nothing was remove
   }
 
   saveFavorites(filtered);
   return true;
 }
+
 
 
  * @param {string} id - The book's unique id
@@ -66,7 +67,7 @@ export function isFavorite(id) {
   return getFavorites().some((fav) => fav.id === id);
 }
 
-
+ 
 export function clearFavorites() {
   localStorage.removeItem(STORAGE_KEY);
 }
