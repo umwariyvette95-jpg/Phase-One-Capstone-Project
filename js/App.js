@@ -1,4 +1,4 @@
-/
+// Lab 4 branch update
 
 // ── ES6 Module Imports ────────────────────────────────────────────
 import { fetchBooksByTitle, fetchDefaultBooks } from "./fetchBooks.js";
@@ -15,7 +15,7 @@ const resultHeading = document.getElementById("result-heading");
 let currentBooks = [];
 
 
- *
+ 
  * @param {Array} books - Array of normalized book objects
  */
 function renderBooks(books) {

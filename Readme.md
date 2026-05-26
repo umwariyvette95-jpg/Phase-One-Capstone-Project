@@ -4,7 +4,6 @@ A responsive, interactive, and API-powered book browsing web application.
 
 ## Project Structure
 
-```
 book-explorer/
 ├── index.html              ← Homepage (search + book grid)
 ├── favorites.html          ← Saved favorites page
@@ -52,10 +51,7 @@ npx serve .
 
 ## API
 
-<<<<<<< HEAD
-=======
 
->>>>>>> feature/lab4-search
 Uses the free [Open Library Search API](https://openlibrary.org/developers/api):
 
 ```
