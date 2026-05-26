@@ -52,6 +52,10 @@ npx serve .
 
 ## API
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/lab4-search
 Uses the free [Open Library Search API](https://openlibrary.org/developers/api):
 
 ```
