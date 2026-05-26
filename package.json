@@ -1,0 +1,21 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "A responsive, interactive, and API-powered book browsing web application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umwariyvette95-jpg/BOOK-EXPLORER-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/umwariyvette95-jpg/BOOK-EXPLORER-/issues"
+  },
+  "homepage": "https://github.com/umwariyvette95-jpg/BOOK-EXPLORER-#readme"
+}
