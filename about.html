@@ -3,18 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>About — Book Explorer</title>
-
-  <meta
-    name="description"
-    content="Learn more about Book Explorer — a modern platform for discovering books, exploring authors, and saving your favorite reads."
-  />
-
+  <meta name="description" content="Learn more about Book Explorer — a modern platform for discovering books, exploring authors, and saving your favorite reads." />
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet" href="css/style.css" />
-
   <script>
     tailwind.config = {
       theme: {
@@ -30,54 +22,35 @@
     };
   </script>
 </head>
-
 <body>
 
 <!-- ════════════════════════ NAVBAR ════════════════════════ -->
 <header>
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container-app flex items-center justify-between py-4">
-
-      <a href="index.html" class="navbar-brand">
-        📚 Book<span>Explorer</span>
-      </a>
+      <a href="index.html" class="navbar-brand">📚 Book<span>Explorer</span></a>
 
       <ul class="desktop-nav flex items-center gap-8" role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
-
         <li>
           <a href="favorites.html" class="nav-link">
             Favorites
             <span class="fav-badge hidden" aria-label="favorites count">0</span>
           </a>
         </li>
-
-        <li>
-          <a href="about.html" class="nav-link active">About</a>
-        </li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
       </ul>
 
-      <button
-        class="hamburger"
-        id="hamburger-btn"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <a href="index.html" class="nav-link">Home</a>
-
       <a href="favorites.html" class="nav-link">
-        Favorites
-        <span class="fav-badge hidden">0</span>
+        Favorites <span class="fav-badge hidden">0</span>
       </a>
-
       <a href="about.html" class="nav-link active">About</a>
     </div>
   </nav>
@@ -86,24 +59,13 @@
 <!-- ════════════════════════ HERO SECTION ════════════════════════ -->
 <section class="about-hero" aria-labelledby="about-heading">
   <div class="container-app">
-
     <p class="hero-eyebrow">Our Story</p>
-
-    <h1
-      class="hero-title"
-      id="about-heading"
-      style="font-size:clamp(2rem,5vw,3.5rem); text-align:center;"
-    >
+    <h1 class="hero-title" id="about-heading" style="font-size:clamp(2rem,5vw,3.5rem); text-align:center;">
       About <em>Book Explorer</em>
     </h1>
-
-    <p
-      class="hero-subtitle"
-      style="margin:0 auto; text-align:center; max-width:520px;"
-    >
+    <p class="hero-subtitle" style="margin:0 auto; text-align:center; max-width:520px;">
       Discover books, explore authors, and build your personal reading collection with ease.
     </p>
-
   </div>
 </section>
 
@@ -112,164 +74,95 @@
 
   <!-- About Book Explorer -->
   <section class="mb-16" aria-labelledby="about-book-heading">
-
     <div class="section-rule"></div>
-
-    <h2 class="section-title mb-6" id="about-book-heading">
-      About Book Explorer
-    </h2>
+    <h2 class="section-title mb-6" id="about-book-heading">About Book Explorer</h2>
 
     <div class="grid gap-8 md:grid-cols-2">
 
       <!-- Text -->
       <div>
-
         <p style="color:var(--color-ink); line-height:1.8; margin-bottom:1rem;">
           <strong>Book Explorer</strong> is a digital platform designed for readers,
           students, and book lovers who want to discover books from different genres
           and authors around the world.
         </p>
-
         <p style="color:#4b5563; line-height:1.8; margin-bottom:1rem;">
           The platform allows users to search for books, explore new stories,
           and save favorite titles in one simple and organized place.
           Whether you enjoy novels, biographies, academic books,
           or timeless classics, Book Explorer makes reading discovery easy and enjoyable.
         </p>
-
         <p style="color:#4b5563; line-height:1.8;">
           Built with a clean and modern design, Book Explorer offers
           a smooth experience across mobile, tablet, and desktop devices.
           The goal is to create a simple, fast, and accessible space
           where everyone can enjoy exploring books.
         </p>
-
       </div>
 
       <!-- Feature Highlights -->
       <div class="feature-card" style="display:flex; flex-direction:column; gap:1.5rem;">
-
         <div style="display:flex; align-items:center; gap:1rem;">
           <div style="font-size:2rem;">📚</div>
-
           <div>
-            <p style="font-weight:700; color:var(--color-ink);">
-              Explore Books
-            </p>
-
-            <p style="font-size:0.875rem; color:var(--color-muted);">
-              Discover books from different categories and authors
-            </p>
+            <p style="font-weight:700; color:var(--color-ink);">Explore Books</p>
+            <p style="font-size:0.875rem; color:var(--color-muted);">Discover books from different categories and authors</p>
           </div>
         </div>
-
         <div style="display:flex; align-items:center; gap:1rem;">
           <div style="font-size:2rem;">🔍</div>
-
           <div>
-            <p style="font-weight:700; color:var(--color-ink);">
-              Smart Search
-            </p>
-
-            <p style="font-size:0.875rem; color:var(--color-muted);">
-              Quickly find books using the search feature
-            </p>
+            <p style="font-weight:700; color:var(--color-ink);">Smart Search</p>
+            <p style="font-size:0.875rem; color:var(--color-muted);">Quickly find books using the search feature</p>
           </div>
         </div>
-
         <div style="display:flex; align-items:center; gap:1rem;">
           <div style="font-size:2rem;">❤️</div>
-
           <div>
-            <p style="font-weight:700; color:var(--color-ink);">
-              Save Favorites
-            </p>
-
-            <p style="font-size:0.875rem; color:var(--color-muted);">
-              Keep your favorite books in your personal collection
-            </p>
+            <p style="font-weight:700; color:var(--color-ink);">Save Favorites</p>
+            <p style="font-size:0.875rem; color:var(--color-muted);">Keep your favorite books in your personal collection</p>
           </div>
         </div>
-
-        
-        
-        </div>
-
       </div>
+
     </div>
   </section>
 
   <!-- Features -->
   <section class="mb-16" aria-labelledby="features-heading">
-
     <div class="section-rule"></div>
-
-    <h2 class="section-title mb-6" id="features-heading">
-      Features
-    </h2>
+    <h2 class="section-title mb-6" id="features-heading">Features</h2>
 
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
       <div class="feature-card">
         <div style="font-size:1.75rem; margin-bottom:0.75rem;">🔍</div>
-
-        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">
-          Book Search
-        </h3>
-
-        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">
-          Search for books easily by title or author.
-        </p>
+        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">Book Search</h3>
+        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">Search for books easily by title or author.</p>
       </div>
 
       <div class="feature-card">
         <div style="font-size:1.75rem; margin-bottom:0.75rem;">❤️</div>
-
-        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">
-          Favorites List
-        </h3>
-
-        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">
-          Save books and access them anytime.
-        </p>
+        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">Favorites List</h3>
+        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">Save books and access them anytime.</p>
       </div>
 
       <div class="feature-card">
         <div style="font-size:1.75rem; margin-bottom:0.75rem;">⚡</div>
-
-        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">
-          Fast Experience
-        </h3>
-
-        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">
-          Lightweight and optimized for smooth performance.
-        </p>
+        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">Fast Experience</h3>
+        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">Lightweight and optimized for smooth performance.</p>
       </div>
-
-      
 
       <div class="feature-card">
         <div style="font-size:1.75rem; margin-bottom:0.75rem;">🔒</div>
-
-        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">
-          Privacy Friendly
-        </h3>
-
-        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">
-          Your data stays stored in your browser.
-        </p>
+        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">Privacy Friendly</h3>
+        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">Your data stays stored in your browser.</p>
       </div>
 
       <div class="feature-card">
         <div style="font-size:1.75rem; margin-bottom:0.75rem;">🌍</div>
-
-        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">
-          Global Library
-        </h3>
-
-        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">
-          Access books from different cultures and genres.
-        </p>
+        <h3 style="font-weight:700; color:var(--color-ink); margin-bottom:0.4rem;">Global Library</h3>
+        <p style="font-size:0.875rem; color:var(--color-muted); line-height:1.7;">Access books from different cultures and genres.</p>
       </div>
 
     </div>
@@ -280,25 +173,18 @@
 <!-- ════════════════════════ FOOTER ════════════════════════ -->
 <footer class="footer">
   <div class="container-app">
-
     <p class="footer-brand">📚 BookExplorer</p>
-
     <p>Made by Umwari</p>
-
     <p class="mt-1" style="font-size:0.8rem; opacity:0.6;">
       Designed for book lovers everywhere.
     </p>
-
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="js/hamburger.js"></script>
-
 <script type="module">
   import { getFavorites } from "./js/favorites.js";
   import { updateFavBadge } from "./js/utils.js";
-
   document.addEventListener("DOMContentLoaded", () => {
     updateFavBadge(getFavorites().length);
   });
