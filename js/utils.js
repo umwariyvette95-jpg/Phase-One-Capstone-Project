@@ -1,8 +1,26 @@
-
+/**
+ * utils.js
+ * ─────────────────────────────────────────
+ * Reusable helper / utility functions used
+ * across the Book Explorer application.
+ *
+ * Exports:
+ *   createBookCard(book, options)   → builds a book card HTML element
+ *   getNoCoverHTML()                → returns placeholder SVG HTML
+ *   showToast(message, type)        → shows a brief notification
+ *   debounce(fn, delay)             → throttles rapid function calls
+ *   sanitizeHTML(str)               → prevents XSS in dynamic content
+ *   updateFavBadge(count)           → refreshes the favorites count badge
+ */
 
 import { isFavorite } from "./favorites.js";
 
+/* ─── Book Card ──────────────────────────────────────────────────── */
 
+/**
+ * createBookCard()
+ * ─────────────────
+ * Builds and returns a complete <article> DOM element for a book.
  *
  * @param {Object} book    - Normalized book object (from fetchBooks.js)
  * @param {Object} options - Config flags:
@@ -11,7 +29,7 @@ import { isFavorite } from "./favorites.js";
  *   @param {Function} options.onRemove    - Called when remove button is clicked
  *
  * @returns {HTMLElement} The fully built book card element
-
+ */
 export function createBookCard(book, options = {}) {
   const { showRemove = false, onFavorite, onRemove } = options;
 
@@ -114,7 +132,11 @@ window.getNoCoverHTML = getNoCoverHTML;
 
 let toastTimeout = null;
 
-
+/**
+ * showToast()
+ * ─────────────
+ * Displays a brief notification message at the bottom-right corner.
+ *
  * @param {string} message - The text to display
  * @param {'default'|'success'|'warning'|'error'} type - Visual style
  */
@@ -146,7 +168,15 @@ export function showToast(message, type = "default") {
   }, 3000);
 }
 
+/* ─── Debounce ───────────────────────────────────────────────────── */
 
+/**
+ * debounce()
+ * ──────────
+ * Wraps a function so it only fires after the user
+ * has stopped calling it for `delay` milliseconds.
+ * Useful for search inputs to avoid firing on every keystroke.
+ *
  * @param {Function} fn    - The function to debounce
  * @param {number}   delay - Wait time in ms (default 300)
  * @returns {Function} The debounced version
@@ -159,7 +189,14 @@ export function debounce(fn, delay = 300) {
   };
 }
 
+/* ─── XSS Protection ─────────────────────────────────────────────── */
 
+/**
+ * sanitizeHTML()
+ * ──────────────
+ * Escapes special HTML characters to prevent XSS attacks
+ * when inserting dynamic content (book titles, author names, etc.)
+ *
  * @param {string} str - Raw string that might contain HTML characters
  * @returns {string} Safe escaped string
  */
@@ -173,7 +210,14 @@ export function sanitizeHTML(str) {
     .replace(/'/g,  "&#39;");
 }
 
+/* ─── Favorites Badge ────────────────────────────────────────────── */
 
+/**
+ * updateFavBadge()
+ * ─────────────────
+ * Updates the number shown in the favorites count badge
+ * in the navbar. Hides the badge when count is 0.
+ *
  * @param {number} count - Current number of favorites
  */
 export function updateFavBadge(count) {
