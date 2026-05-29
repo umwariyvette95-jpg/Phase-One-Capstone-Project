@@ -11,7 +11,7 @@ import { isFavorite } from "./favorites.js";
  *   @param {Function} options.onRemove    - Called when remove button is clicked
  *
  * @returns {HTMLElement} The fully built book card element
- */
+
 export function createBookCard(book, options = {}) {
   const { showRemove = false, onFavorite, onRemove } = options;
 
@@ -114,11 +114,7 @@ window.getNoCoverHTML = getNoCoverHTML;
 
 let toastTimeout = null;
 
-/**
- * showToast()
- * ─────────────
- * Displays a brief notification message at the bottom-right corner.
- *
+
  * @param {string} message - The text to display
  * @param {'default'|'success'|'warning'|'error'} type - Visual style
  */
@@ -150,15 +146,7 @@ export function showToast(message, type = "default") {
   }, 3000);
 }
 
-/* ─── Debounce ───────────────────────────────────────────────────── */
 
-/**
- * debounce()
- * ──────────
- * Wraps a function so it only fires after the user
- * has stopped calling it for `delay` milliseconds.
- * Useful for search inputs to avoid firing on every keystroke.
- *
  * @param {Function} fn    - The function to debounce
  * @param {number}   delay - Wait time in ms (default 300)
  * @returns {Function} The debounced version
@@ -171,14 +159,7 @@ export function debounce(fn, delay = 300) {
   };
 }
 
-/* ─── XSS Protection ─────────────────────────────────────────────── */
 
-/**
- * sanitizeHTML()
- * ──────────────
- * Escapes special HTML characters to prevent XSS attacks
- * when inserting dynamic content (book titles, author names, etc.)
- *
  * @param {string} str - Raw string that might contain HTML characters
  * @returns {string} Safe escaped string
  */
@@ -192,14 +173,7 @@ export function sanitizeHTML(str) {
     .replace(/'/g,  "&#39;");
 }
 
-/* ─── Favorites Badge ────────────────────────────────────────────── */
 
-/**
- * updateFavBadge()
- * ─────────────────
- * Updates the number shown in the favorites count badge
- * in the navbar. Hides the badge when count is 0.
- *
  * @param {number} count - Current number of favorites
  */
 export function updateFavBadge(count) {
