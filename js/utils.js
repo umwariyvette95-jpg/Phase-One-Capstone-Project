@@ -1,26 +1,8 @@
-/**
- * utils.js
- * ─────────────────────────────────────────
- * Reusable helper / utility functions used
- * across the Book Explorer application.
- *
- * Exports:
- *   createBookCard(book, options)   → builds a book card HTML element
- *   getNoCoverHTML()                → returns placeholder SVG HTML
- *   showToast(message, type)        → shows a brief notification
- *   debounce(fn, delay)             → throttles rapid function calls
- *   sanitizeHTML(str)               → prevents XSS in dynamic content
- *   updateFavBadge(count)           → refreshes the favorites count badge
- */
+
 
 import { isFavorite } from "./favorites.js";
 
-/* ─── Book Card ──────────────────────────────────────────────────── */
 
-/**
- * createBookCard()
- * ─────────────────
- * Builds and returns a complete <article> DOM element for a book.
  *
  * @param {Object} book    - Normalized book object (from fetchBooks.js)
  * @param {Object} options - Config flags:
