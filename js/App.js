@@ -1,17 +1,4 @@
-/**
- * app.js
- * ─────────────────────────────────────────
- * Lab 2 & 3 – Main application logic for the Homepage.
- *
- * Responsibilities:
- *   - Initialize the page (load default books)
- *   - Render book cards into the grid
- *   - Handle search input & button
- *   - Show loading / empty / error states
- *   - Wire up Add-to-Favorites interactions
- *
- * Uses ES6 module imports (type="module" in HTML)
- */
+
 
 // ── ES6 Module Imports ────────────────────────────────────────────
 import { fetchBooksByTitle, fetchDefaultBooks } from "./fetchBooks.js";
@@ -31,13 +18,7 @@ let currentBooks = [];
    RENDERING
    ══════════════════════════════════════════════════════════════════ */
 
-/**
- * renderBooks()
- * ─────────────
- * Clears the grid and renders an array of book cards.
- *
- * @param {Array} books - Array of normalized book objects
- */
+
 function renderBooks(books) {
   currentBooks = books;
   booksGrid.innerHTML = "";
@@ -46,7 +27,7 @@ function renderBooks(books) {
     renderEmptyState();
     return;
   }
-
+//create book cards
   books.forEach((book) => {
     const card = createBookCard(book, {
       showRemove: false,
@@ -56,11 +37,9 @@ function renderBooks(books) {
   });
 }
 
-/**
- * renderLoadingState()
- * ─────────────────────
- * Shows a centered spinner while data is being fetched.
- */
+
+//Replace the content of book grid
+
 function renderLoadingState() {
   booksGrid.innerHTML = `
     <div class="state-container">
@@ -71,11 +50,7 @@ function renderLoadingState() {
   `;
 }
 
-/**
- * renderEmptyState()
- * ──────────────────
- * Shows a friendly message when search returns no results.
- */
+
 function renderEmptyState() {
   booksGrid.innerHTML = `
     <div class="state-container">
@@ -90,13 +65,7 @@ function renderEmptyState() {
   `;
 }
 
-/**
- * renderErrorState()
- * ──────────────────
- * Shows an error message when the API call fails.
- *
- * @param {string} message - Error description
- */
+
 function renderErrorState(message) {
   booksGrid.innerHTML = `
     <div class="state-container">
@@ -114,11 +83,7 @@ function renderErrorState(message) {
    SEARCH
    ══════════════════════════════════════════════════════════════════ */
 
-/**
- * performSearch()
- * ─────────────────
- * Reads the search input, fetches matching books, and renders them.
- */
+
 async function performSearch() {
   const query = searchInput.value.trim();
 
@@ -147,13 +112,7 @@ async function performSearch() {
    FAVORITES
    ══════════════════════════════════════════════════════════════════ */
 
-/**
- * handleAddFavorite()
- * ────────────────────
- * Called when the user clicks "Add to Favorites" on a book card.
- *
- * @param {Object} book - The book object to save
- */
+
 function handleAddFavorite(book) {
   const added = addFavorite(book);
 
@@ -187,11 +146,6 @@ function handleAddFavorite(book) {
    INITIALIZATION
    ══════════════════════════════════════════════════════════════════ */
 
-/**
- * init()
- * ──────
- * Entry point – runs when the DOM is ready.
- */
 async function init() {
   // ── Event Listeners ─────────────────────────────────────────
   searchBtn?.addEventListener("click", performSearch);

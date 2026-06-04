@@ -1,15 +1,4 @@
-/**
- * favorites-page.js
- * ─────────────────────────────────────────
- * Lab 2 – Favorites Page Logic
- *
- * Responsibilities:
- *   - Load and display saved favorite books from localStorage
- *   - Handle individual book removal
- *   - Handle "Clear All" button
- *   - Show empty state when no favorites exist
- *   - Keep the navbar badge count in sync
- */
+
 
 import { getFavorites, removeFavorite, clearFavorites } from "./favorites.js";
 import { createBookCard, showToast, updateFavBadge }    from "./utils.js";
@@ -21,16 +10,6 @@ const favCount      = document.getElementById("fav-count");
 const gridSection   = document.getElementById("grid-section");
 const emptySection  = document.getElementById("empty-section");
 
-/* ══════════════════════════════════════════════════════════════════
-   RENDERING
-   ══════════════════════════════════════════════════════════════════ */
-
-/**
- * renderFavorites()
- * ─────────────────
- * Reads favorites from localStorage and renders them
- * into the grid. Shows the empty state if none exist.
- */
 function renderFavorites() {
   const favorites = getFavorites();
 
