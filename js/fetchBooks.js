@@ -1,28 +1,10 @@
-/**
- * fetchBooks.js
- * ─────────────────────────────────────────
- * Lab 3 – Exercise 3.1: API Module
- * Handles all communication with the Open Library API.
- * Uses fetch() with async/await for clean, readable code.
- *
- * Open Library Search API docs:
- *   https://openlibrary.org/developers/api
- */
 
-// Base URL for Open Library's search endpoint
 const API_BASE = "https://openlibrary.org/search.json";
 
 // How many books to request per query
 const RESULTS_LIMIT = 20;
 
-/**
- * fetchBooksByTitle()
- * -------------------
- * Searches Open Library for books matching a title query.
- *
- * @param {string} query - The search term (book title / keyword)
- * @returns {Promise<Array>} Array of normalized book objects
- */
+
 export async function fetchBooksByTitle(query) {
   const url = `${API_BASE}?title=${encodeURIComponent(query)}&limit=${RESULTS_LIMIT}&fields=key,title,author_name,first_publish_year,cover_i,isbn`;
 
@@ -36,14 +18,7 @@ export async function fetchBooksByTitle(query) {
   return (data.docs || []).map(normalizeBook);
 }
 
-/**
- * fetchDefaultBooks()
- * -------------------
- * Loads a default set of books on first page load
- * so the grid isn't empty before the user searches.
- *
- * @returns {Promise<Array>} Array of normalized book objects
- */
+
 export async function fetchDefaultBooks() {
   const url = `${API_BASE}?q=classic+literature&limit=${RESULTS_LIMIT}&fields=key,title,author_name,first_publish_year,cover_i,isbn`;
 
@@ -57,15 +32,7 @@ export async function fetchDefaultBooks() {
   return (data.docs || []).map(normalizeBook);
 }
 
-/**
- * normalizeBook()
- * ---------------
- * Transforms a raw Open Library doc into a clean book object
- * that the rest of the app can rely on.
- *
- * @param {Object} doc - Raw doc from Open Library API
- * @returns {Object} Normalized book object
- */
+
 function normalizeBook(doc) {
   return {
     // Unique identifier (e.g. "/works/OL45804W")
