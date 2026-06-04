@@ -50,7 +50,7 @@ function renderLoadingState() {
   `;
 }
 
-
+// Show when no results are found for a search 
 function renderEmptyState() {
   booksGrid.innerHTML = `
     <div class="state-container">
@@ -64,7 +64,6 @@ function renderEmptyState() {
     </div>
   `;
 }
-
 
 function renderErrorState(message) {
   booksGrid.innerHTML = `

@@ -496,6 +496,101 @@ img  { max-width: 100%; display: block; }
 .hidden { display: none !important; }
 
 /* ══════════════════════════════════════════
+   INLINE STYLES CONVERTED TO CLASSES
+   ══════════════════════════════════════════ */
+
+/* Container variants */
+.container-app-wide {
+  width:     100%;
+  max-width: 1200px;
+  margin:    0 auto;
+  padding:   0 1.5rem;
+}
+
+/* Hero title with responsive font size */
+.hero-title-responsive {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Hero subtitle centered */
+.hero-subtitle-centered {
+  margin:    0 auto;
+  text-align: center;
+  max-width: 520px;
+}
+
+/* Text styling */
+.text-primary {
+  color: var(--color-ink);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.text-secondary {
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.text-secondary-last {
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+/* Flex layouts */
+.flex-col-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flex-row-gap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Icon styling */
+.icon-large {
+  font-size: 2rem;
+}
+
+.icon-medium {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Feature highlight text */
+.feature-title {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.feature-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.feature-desc {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* Footer text */
+.footer-credit {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Favorites count */
+.fav-count-text {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 0.25rem;
+}
+
+/* ══════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════ */
 .mobile-menu         { display: none; }
@@ -530,10 +625,12 @@ img  { max-width: 100%; display: block; }
   gap:             0.5rem;
   overflow-x:      auto;
   padding-bottom:  2px;
-  scrollbar-width: none;
+  /* Hide scrollbar for Chrome/Safari */
 }
 
-.filter-scroll::-webkit-scrollbar { display: none; }
+.filter-scroll::-webkit-scrollbar { 
+  display: none;
+}
 
 .filter-btn {
   flex-shrink:   0;
