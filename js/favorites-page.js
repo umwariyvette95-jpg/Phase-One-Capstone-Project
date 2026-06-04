@@ -48,13 +48,7 @@ function renderFavorites() {
    EVENT HANDLERS
    ══════════════════════════════════════════════════════════════════ */
 
-/**
- * handleRemoveFavorite()
- * ──────────────────────
- * Removes a single book from favorites and re-renders the grid.
- *
- * @param {Object} book - The book to remove
- */
+
 function handleRemoveFavorite(book) {
   const removed = removeFavorite(book.id);
 
@@ -64,11 +58,7 @@ function handleRemoveFavorite(book) {
   }
 }
 
-/**
- * handleClearAll()
- * ────────────────
- * Asks for confirmation, then clears all favorites.
- */
+
 function handleClearAll() {
   const favorites = getFavorites();
 
@@ -90,11 +80,7 @@ function handleClearAll() {
    INITIALIZATION
    ══════════════════════════════════════════════════════════════════ */
 
-/**
- * init()
- * ──────
- * Entry point — runs when the DOM is ready.
- */
+
 function init() {
   // Wire up the Clear All button
   clearAllBtn?.addEventListener("click", handleClearAll);
