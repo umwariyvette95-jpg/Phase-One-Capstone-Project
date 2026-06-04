@@ -1,10 +1,4 @@
-/**
- * hamburger.js
- * ────────────────────────────────────────
- * Handles mobile hamburger / mobile-menu toggle.
- * Loaded as a regular script (not a module) so it
- * works on every page without import boilerplate.
- */
+
 (function () {
   document.addEventListener("DOMContentLoaded", function () {
     const hamburger  = document.getElementById("hamburger-btn");
