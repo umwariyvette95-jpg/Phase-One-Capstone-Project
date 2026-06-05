@@ -4,22 +4,20 @@ A responsive, interactive, and API-powered book browsing web application.
 
 ## Project Structure
 
-book-explorer/
+```
 ├── index.html              ← Homepage (search + book grid)
 ├── favorites.html          ← Saved favorites page
 ├── about.html              ← About page
 ├── css/
 │   └── style.css           ← Custom styles (complements Tailwind)
 ├── js/
-│   ├── app.js              ← Main logic (rendering, search, DOM)
+│   ├── App.js              ← Main logic (rendering, search, DOM)
 │   ├── favorites.js        ← Favorites module (localStorage)
 │   ├── favorites-page.js   ← Favorites page logic (remove, clear all)
 │   ├── fetchBooks.js       ← Open Library API module
 │   ├── hamburger.js        ← Mobile menu toggle
 │   └── utils.js            ← Reusable helpers
-└── assets/
-    ├── images/
-    └── icons/
+└── image/
 ```
 
 ## How to Run
@@ -51,7 +49,6 @@ npx serve .
 
 ## API
 
-
 Uses the free [Open Library Search API](https://openlibrary.org/developers/api):
 
 ```
@@ -73,7 +70,7 @@ No API key required.
 
 | File | Responsibility |
 |------|---------------|
-| `app.js` | Homepage entry point — renders books, handles search |
+| `App.js` | Homepage entry point — renders books, handles search |
 | `fetchBooks.js` | All Open Library API calls, normalizes book data |
 | `favorites.js` | Read/write favorites to `localStorage` |
 | `favorites-page.js` | Favorites page — renders saved books, remove, clear all |
@@ -84,7 +81,7 @@ No API key required.
 
 ```
 index.html
-  └── app.js
+  └── App.js
         ├── fetchBooks.js   (fetchDefaultBooks, fetchBooksByTitle)
         ├── favorites.js    (addFavorite, getFavorites)
         └── utils.js        (createBookCard, showToast, updateFavBadge)
